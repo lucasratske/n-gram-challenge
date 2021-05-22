@@ -1,3 +1,8 @@
+/**
+ * Build a array with the sequence of the first part of a N-gram
+ * @param {Array} array Array of characteres
+ * @returns {Array}
+ */
 const getDividedArrays = (array) => {
   const arrayToReturn = [];
   array.forEach((element, index) => {
@@ -11,6 +16,11 @@ const getDividedArrays = (array) => {
   return arrayToReturn;
 };
 
+/**
+ * Build a N-Gram
+ * @param {string} str Represents a sequence of characteres/words/numbers separated by a white space
+ * @returns {Array} Array of strings representing the N-Grams
+ */
 const getNGrams = (str) => {
   if (str === undefined) return [];
   str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '').trim();
@@ -29,7 +39,5 @@ const getNGrams = (str) => {
 
   return nGramsArray;
 };
-
-console.log(getNGrams('Show me the code.'));
 
 module.exports = { getNGrams, getDividedArrays };
