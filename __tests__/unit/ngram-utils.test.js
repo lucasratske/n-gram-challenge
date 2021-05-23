@@ -1,14 +1,14 @@
-const index = require('../../src/index');
+const ngramUtils = require('../../src/app/utils/ngram-utils');
 
 describe('N-Grams Code Challenge', () => {
   it('should return empty array', () => {
-    expect(index.getNGrams('')).toStrictEqual([]);
-    expect(index.getNGrams()).toStrictEqual([]);
+    expect(ngramUtils.getNGrams('')).toStrictEqual([]);
+    expect(ngramUtils.getNGrams()).toStrictEqual([]);
   });
 
   it('should return just the first n-gram', () => {
     const arrayToDivide = 'Show me the code.'.split(' ');
-    expect(index.getDividedArrays(arrayToDivide)).toStrictEqual([
+    expect(ngramUtils.getDividedArrays(arrayToDivide)).toStrictEqual([
       'Show',
       'Show me',
       'Show me the',
@@ -17,7 +17,7 @@ describe('N-Grams Code Challenge', () => {
   });
 
   it('should return the entire n-gram', () => {
-    expect(index.getNGrams('Show me the code.')).toStrictEqual([
+    expect(ngramUtils.getNGrams('Show me the code.')).toStrictEqual([
       'Show',
       'Show me',
       'Show me the',
