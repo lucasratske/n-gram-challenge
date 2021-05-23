@@ -19,3 +19,9 @@ yarn test
 yarn
 yarn dev
 ```
+
+## Test the API on Postman
+
+```
+GET http://localhost:3000/ngram?phrase=Show me the code.
+```
